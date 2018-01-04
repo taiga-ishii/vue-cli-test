@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Title dayo</h1>
+    <h1>My first gellery</h1>
   </section>
 </template>
 
@@ -17,8 +17,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   section {
+    color:white;
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
+    background-image: url(../assets/screen_example.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   h1{
     font-weight: normal;
