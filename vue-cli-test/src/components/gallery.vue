@@ -11,7 +11,7 @@
     </header>
     <!--ランダムで画像を表示する-->
     <h1>Gallery</h1>
-      <div v-for="(List, anim) in this.$store.gallery.list">
+      <div v-for="(list, anim) in this.$store.state.gallery.list">
         <div v-for="img in list">
           <img v-bind:src="imgUrl('./' + anim + '/' + img)">
         </div>
@@ -20,15 +20,15 @@
 </template>
 
 <script>
-const images = require.context('..assets/img', true, /\.jpg$/);
+const images = require.context('../assets/img', true, /\.jpg$/);
 
 export default {
   data() {
     return {
     };
   },
-  methods:{
-    imgUrl(path){
+  methods: {
+    imgUrl(path) {
       return images(path);
     },
   },
